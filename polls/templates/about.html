@@ -1,0 +1,23 @@
+{% extends 'template.html' %}
+{% block body %}
+<div class="content">
+    {% if name %}
+    <h1>Привет</h1>
+    <h2>{{name}}</h2>
+    {% else %}
+    <h2> ТЫ КТО? </h2>
+    {% endif %}
+    <div style="padding: 20px">
+        <a href="/about/?name=Вольдемар">Вольдемар</a>
+        <a href="/about/?name=Некоглай">Некоглай</a>
+        <a href="/about/?name=Алексей">Алексей</a>
+    </div>
+    <div style="padding: 20">
+        <h1>Расскажи кто ты</h1>
+        <form action="/about/" method="get">
+            <input type="text" name = "name">
+            <button type="submit">это я</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
