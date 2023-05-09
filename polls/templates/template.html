@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{% static 'polls/css/index.css' %}">
+    <link type="image/png" sizes="16x16" rel="icon" href="{% static 'polls/img/favicon.ico' %}">
     <meta charset="UTF-8">
     <title>{{title}}</title>
 </head>
@@ -37,70 +39,3 @@
 </div>
 </html>
 
-<style>
-    body.content {
-        background-color: #ffffff;
-        height: 100%;
-        width: 100%;
-    }
-
-    header {
-        background-color: aliceblue;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    footer {
-        background-color: aquamarine;
-    }
-
-    .menu {
-        flex-grow: 1;
-    }
-
-    .menu ul {
-        display: flex;
-        flex-flow: row nowrap;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    .menu li {
-        margin-right: 20px;
-    }
-
-    .menu li:last-child {
-        margin-right: 0px;
-    }
-
-    .menu a {
-        padding: 8px 10px;
-    }
-
-    .logo {
-        margin-right: 30px;
-    }
-
-    menu.active {
-        font-family: Trajan Pro, Times New Roman;
-        color: #ffffff;
-        font-variant: small-caps;
-        font-size: 16px;
-        padding-left: 7px;
-        word-spacing: 1px;
-    }
-
-    a {
-        text-decoration: none;
-        display: inline-block;
-        padding: 5px 10px;
-        letter-spacing: 1px;
-        margin: 0 20px;
-        font-size: 24px;
-        font-family: 'Fredoka One', cursive;
-        transition: .3s ease-in-out;
-    }
-</style>
