@@ -246,7 +246,7 @@ header.sticky .nav-bar{
   position: relative;
 }
 .home-container .home-img img{
-  width: 90%;
+  width: 50%;
   transform: translate();
 }
 .home .scroll-down{

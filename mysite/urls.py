@@ -31,4 +31,5 @@ urlpatterns = [
     path('personal_account/', index.personal_account),
     path('login/', index.login),
     path('register/', index.register),
+    path('contacts/', index.contacts),
 ]

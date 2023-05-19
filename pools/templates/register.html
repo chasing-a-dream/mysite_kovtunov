@@ -1,15 +1,16 @@
 {% extends 'template.html' %}
 {% load static %}
+
+
 {% block body %}
 
 <h1>{{title}}</h1>
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p}}
-    <div class="form-error">{{ f.errors }}</div>
-
-    <button type="submit">Регистрация</button>
-</form>
+<h2>Регистрация</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Зарегистрироваться</button>
+    </form>
 
 {% endblock %}

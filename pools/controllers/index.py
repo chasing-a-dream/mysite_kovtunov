@@ -8,7 +8,7 @@ def index(request):
 
 
 def about(request):
-    return HttpResponse("My name is Vadim")
+    return render(request, 'about.html', {})
 
 
 def contacts(request):
@@ -37,3 +37,9 @@ def register(request):
 
 def login(request):
     return render(request, 'login.html', {})
+
+
+def contacts(request):
+    return render(request, 'contacts.html', {})
+
+
