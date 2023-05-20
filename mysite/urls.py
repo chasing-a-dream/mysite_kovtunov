@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from pools.controllers import index
 from pools.controllers import feedback
-from pools.views import RegisterUser
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
