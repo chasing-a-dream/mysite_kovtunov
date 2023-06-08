@@ -11,20 +11,8 @@ def about(request):
     return render(request, 'about.html', {})
 
 
-def contacts(request):
-    return render(request, 'contacts.html', {})
-
-
-def hobbies(request):
-    return HttpResponse("My hobbies")
-
-
-def gallery(request):
-    return HttpResponse("My gallery")
-
-
-def photo(request):
-    return HttpResponse("My photo")
+def skills(request):
+    return render(request, 'skills.html', {})
 
 
 def personal_account(request):
@@ -41,5 +29,9 @@ def login(request):
 
 def contacts(request):
     return render(request, 'contacts.html', {})
+
+
+def skills(request):
+    return render(request, 'skills.html', {})
 
 

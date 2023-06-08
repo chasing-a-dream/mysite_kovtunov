@@ -1,12 +1,18 @@
-from django.contrib.auth.forms import UserCreationForm
-from django.http import HttpResponse
-from django.contrib.auth.views import LoginView
-from django.urls import reverse_lazy
-from django.views.generic import CreateView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import render
+from django.views.generic import ListView, DetailView
+
+from .models import Services, WhatProvide
 
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+class ServicesListView(ListView):
+    model = Services
+    template_name = 'services.html'
 
 
+class WhatProvideListView(ListView):
+    model = WhatProvide
+    template_name = 'services.html'
+
+# def PkComparison(pk1, pk2):
+#     if pk1 == pk2
+#         re

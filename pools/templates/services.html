@@ -1,0 +1,239 @@
+{% extends 'template.html' %}
+{% load static %}
+{% block body %}
+
+<!--=======Services section=======-->
+
+<section class="services section " id="services">
+    <div class="container flex-center">
+        <h1 class="section-title-01">Services</h1>
+        <h2 class="section-title-02">Services</h2>
+        <div class="content">
+            <div class="services-description">
+                <h3>Мы предлагаем</h3>
+            </div>
+            <ul class="service-list">
+                {% for services in object_list %}
+                <li class="service-container">
+
+                    <div class="service-card">
+<!--                        <i>тут бля иконка</i>-->
+                        <img src="{{services.icon}}">
+                        <h3>{{services.service_name}}</h3>
+                        <div class="learn-more-btn">{{services.service_text}}<i
+                                class="fas fa-long-arrow-alt-right"></i></div>
+                    </div>
+                    <div class="service-modal flex-center">
+                        <div class="service-modal-body">
+                            <i class="fas fa-times modal-close-btn"></i>
+                            <h3>{{services.more_service_name}}</h3>
+                            <h4>{{services.more_service_question}}</h4>
+                            <p>{{services.more_service_text}}</p>
+                            <h4>Мы предлагаем</h4>
+                            <ul>
+
+                                {% for whatprovide in object_list %}
+                                    <h3>point</h3>
+                                    {% if whatprovide.service_id == services.id %}
+                                    <li><i class="fas fa-check-circle"></i>{{whatprovide.point}}</li>
+    <!--                                <li><i class="fas fa-check-circle"></i>Create exceptional user experiences</li>-->
+    <!--                                <li><i class="fas fa-check-circle"></i>Discover new business opportunities</li>-->
+    <!--                                <li><i class="fas fa-check-circle"></i>Save resources</li>-->
+                                    {% endif %}
+                                {% endfor %}
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </li>
+              {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--=======Portfolio section=======-->
+<section class="partfolio section" id="partfolio">
+    <div class="container flex-center">
+        <h1 class="section-title-01">Partfolio</h1>
+        <h2 class="section-title-02">Partfolio</h2>
+        <div class="content">
+            <div class="partfolio-list">
+                <div class="img-card-container">
+                    <div class="img-card">
+                        <div class="overplay"></div>
+                        <div class="info">
+                            <h3>Web Desing</h3>
+                            <span>Youtube</span>
+                        </div>
+                        <img src="{% static 'pools/img/port-img1.jpg' %}" alt="">
+                    </div>
+                    <div class="partfolio-model  flex-center">
+                        <div class="partfolio-model-body">
+                            <i class="fas fa-times partfolio-close-btn"></i>
+                            <h3>Web Desing</h3>
+                            <img src="{% static 'pools/img/port-img1.jpg' %}" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-card-container">
+                    <div class="img-card">
+                        <div class="overplay"></div>
+                        <div class="info">
+                            <h3>UI/UX Desing</h3>
+                            <span>Youtube</span>
+                        </div>
+                        <img src="{% static 'pools/img/port-img2.jpg' %}" alt="">
+                    </div>
+                    <div class="partfolio-model  flex-center">
+                        <div class="partfolio-model-body">
+                            <i class="fas fa-times partfolio-close-btn"></i>
+                            <h3>UI/UX Desing</h3>
+                            <img src="{% static 'pools/images/port-img2.jpg' %}" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-card-container">
+                    <div class="img-card">
+                        <div class="overplay"></div>
+                        <div class="info">
+                            <h3>Branding &x Desing</h3>
+                            <span>Youtube</span>
+                        </div>
+                        <img src="{% static 'pools/img/port-img3.jpg' %}" alt="">
+                    </div>
+                    <div class="partfolio-model  flex-center">
+                        <div class="partfolio-model-body">
+                            <i class="fas fa-times partfolio-close-btn"></i>
+                            <h3>Branding &x Desing</h3>
+                            <img src="{% static 'pools/img/port-img3.jpg' %}" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-card-container">
+                    <div class="img-card">
+                        <div class="overplay"></div>
+                        <div class="info">
+                            <h3>Web Development</h3>
+                            <span>Youtube</span>
+                        </div>
+                        <img src="{% static 'pools/img/port-img4.jpg' %}" alt="">
+                    </div>
+                    <div class="partfolio-model  flex-center">
+                        <div class="partfolio-model-body">
+                            <i class="fas fa-times partfolio-close-btn"></i>
+                            <h3>Web Development</h3>
+                            <img src="{% static 'pools/img/port-img4.jpg' %}" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-card-container">
+                    <div class="img-card">
+                        <div class="overplay"></div>
+                        <div class="info">
+                            <h3>Content Writing</h3>
+                            <span>Youtube</span>
+                        </div>
+                        <img src="{% static 'pools/img/port-img5.jpg' %}" alt="">
+                    </div>
+                    <div class="partfolio-model  flex-center">
+                        <div class="partfolio-model-body">
+                            <i class="fas fa-times partfolio-close-btn"></i>
+                            <h3>Content Writing</h3>
+                            <img src="{% static 'pools/img/port-img5.jpg' %}" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-card-container">
+                    <div class="img-card">
+                        <div class="overplay"></div>
+                        <div class="info">
+                            <h3>Interface Desing</h3>
+                            <span>Youtube</span>
+                        </div>
+                        <img src="{% static 'pools/img/port-img6.jpg' %}" alt="">
+                    </div>
+                    <div class="partfolio-model  flex-center">
+                        <div class="partfolio-model-body">
+                            <i class="fas fa-times partfolio-close-btn"></i>
+                            <h3>Interface Desing</h3>
+                            <img src="{% static 'pools/img/port-img6.jpg' %}" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--=======Our Clients=======-->
+    <div class="our-client sub-section">
+        <div class="container flex-center">
+            <h1 class="section-title-01">Our Clients</h1>
+            <h2 class="section-title-02">Our Clients</h2>
+            <div class="content">
+                <div class="swiper client-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide flex-center">
+                            <div class="client-img">
+                                <img src="{% static 'pools/img/client.jpg' %}" alt="">
+                            </div>
+                            <div class="clietn-details">
+                                <p>Hi, I'm Aria Collins and I am designer & developer who dream making the world better
+                                    place by products. I am also very active for international clients.</p>
+                                <h3>Aria Collins</h3>
+                                <span>Marketing Manager</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex-center">
+                            <div class="client-img">
+                                <img src="{% static 'pools/img/client2.jpg' %}" alt="">
+                            </div>
+                            <div class="clietn-details">
+                                <p>This is outstanding work. Everything I needed to do has been done by the makers. I
+                                    really like this template and more importantly my clients are blown away by it.</p>
+                                <h3>Cillian Metcalfe</h3>
+                                <span>Graphic Designer</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex-center">
+                            <div class="client-img">
+                                <img src="{% static 'pools/img/client3.jpg' %}" alt="">
+                            </div>
+                            <div class="clietn-details">
+                                <p>These people really know what they are doing! Great customer support availability and
+                                    supperb kindness. I am very happy that I've purchased this liscense!!!</p>
+                                <h3>Kianna Baird</h3>
+                                <span>App Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+                    <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+

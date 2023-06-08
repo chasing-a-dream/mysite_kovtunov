@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from pools.controllers import index
 from pools.controllers import feedback
+from pools import views
 
 
 urlpatterns = [
@@ -24,12 +25,12 @@ urlpatterns = [
     path('', index.index),
     path('about/', index.about),
     path('contacts/', index.contacts),
-    path('hobbies/', index.hobbies),
-    path('gallery/', index.gallery),
-    path('photo/', index.photo),
     path('feedback/', feedback.create),
     path('personal_account/', index.personal_account),
     path('login/', index.login),
     path('register/', index.register),
     path('contacts/', index.contacts),
+    path('services/', views.ServicesListView.as_view(), name='services'),
+    path('services/', views.WhatProvideListView.as_view(), name='services'),
+    path('skills/', index.skills),
 ]
