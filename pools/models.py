@@ -34,3 +34,10 @@ class WhatProvide(models.Model):
         return f'{self.point} - {self.service_id}'
 
 
+class Portfolio(models.Model):
+    icon = models.URLField(max_length=500, default='')
+    title = models.CharField(max_length=100)
+    portfolio_text = models.TextField()
+
+    def __str__(self):
+        return f'{self.title}'

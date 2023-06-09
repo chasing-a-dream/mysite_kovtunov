@@ -18,7 +18,5 @@ def contacts(request):
     return render(request, 'contacts.html', {})
 
 
-def skills(request):
-    return render(request, 'skills.html', {})
 
 
