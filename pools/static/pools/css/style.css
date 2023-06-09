@@ -523,7 +523,8 @@ header.sticky .nav-bar{
   gap: 20px;
 }
 .service-card{
-  min-height: auto;
+  display: flex;
+  flex-grow: 1;
   background: var(--card-bg-color);
   border-bottom: 3px solid var(--second-color);
   padding: 50px;

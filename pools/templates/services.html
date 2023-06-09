@@ -13,11 +13,10 @@
                 <h3>Мы предлагаем</h3>
             </div>
             <ul class="service-list">
-                {% for services in object_list %}
+                {% for services in servicesList %}
                 <li class="service-container">
 
                     <div class="service-card">
-<!--                        <i>тут бля иконка</i>-->
                         <img src="{{services.icon}}">
                         <h3>{{services.service_name}}</h3>
                         <div class="learn-more-btn">{{services.service_text}}<i
@@ -31,15 +30,8 @@
                             <p>{{services.more_service_text}}</p>
                             <h4>Мы предлагаем</h4>
                             <ul>
-
-                                {% for whatprovide in object_list %}
-                                    <h3>point</h3>
-                                    {% if whatprovide.service_id == services.id %}
+                                {% for whatprovide in services.provides %}
                                     <li><i class="fas fa-check-circle"></i>{{whatprovide.point}}</li>
-    <!--                                <li><i class="fas fa-check-circle"></i>Create exceptional user experiences</li>-->
-    <!--                                <li><i class="fas fa-check-circle"></i>Discover new business opportunities</li>-->
-    <!--                                <li><i class="fas fa-check-circle"></i>Save resources</li>-->
-                                    {% endif %}
                                 {% endfor %}
 
                             </ul>
@@ -56,22 +48,22 @@
 <!--=======Portfolio section=======-->
 <section class="partfolio section" id="partfolio">
     <div class="container flex-center">
-        <h1 class="section-title-01">Partfolio</h1>
-        <h2 class="section-title-02">Partfolio</h2>
+        <h1 class="section-title-01">Portfolio</h1>
+        <h2 class="section-title-02">Portfolio</h2>
         <div class="content">
             <div class="partfolio-list">
                 <div class="img-card-container">
                     <div class="img-card">
                         <div class="overplay"></div>
                         <div class="info">
-                            <h3>Web Desing</h3>
-                            <span>Youtube</span>
+                            <h3>Анализ процесса потребительского кредитования</h3>
+                            <span>Process mining</span>
                         </div>
-                        <img src="{% static 'pools/img/port-img1.jpg' %}" alt="">
+                        <img src="https://infomaximum.ru/images/cases/analysisOfTheConsumerLendingProcess.svg" alt="">
                     </div>
-                    <div class="partfolio-model  flex-center">
+                    <div class="partfolio-model flex-center">
                         <div class="partfolio-model-body">
-                            <i class="fas fa-times partfolio-close-btn"></i>
+                            <i class="fas fa-times"></i>
                             <h3>Web Desing</h3>
                             <img src="{% static 'pools/img/port-img1.jpg' %}" alt="">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -87,7 +79,7 @@
                             <h3>UI/UX Desing</h3>
                             <span>Youtube</span>
                         </div>
-                        <img src="{% static 'pools/img/port-img2.jpg' %}" alt="">
+                        <img src="https://infomaximum.ru/images/cases/sharedServiceCenterOperationsAnalysis.svg" alt="">
                     </div>
                     <div class="partfolio-model  flex-center">
                         <div class="partfolio-model-body">
@@ -188,13 +180,13 @@
     <div class="our-client sub-section">
         <div class="container flex-center">
             <h1 class="section-title-01">Our Clients</h1>
-            <h2 class="section-title-02">Our Clients</h2>
+            <h2 class="section-title-02">Наши клиенты</h2>
             <div class="content">
                 <div class="swiper client-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide flex-center">
                             <div class="client-img">
-                                <img src="{% static 'pools/img/client.jpg' %}" alt="">
+                                <img src="{% static 'pools/img/tagir.jpg' %}" alt="">
                             </div>
                             <div class="clietn-details">
                                 <p>Hi, I'm Aria Collins and I am designer & developer who dream making the world better

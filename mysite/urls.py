@@ -26,11 +26,7 @@ urlpatterns = [
     path('about/', index.about),
     path('contacts/', index.contacts),
     path('feedback/', feedback.create),
-    path('personal_account/', index.personal_account),
-    path('login/', index.login),
-    path('register/', index.register),
     path('contacts/', index.contacts),
-    path('services/', views.ServicesListView.as_view(), name='services'),
-    path('services/', views.WhatProvideListView.as_view(), name='services'),
+    path('services/', views.services, name='services'),
     path('skills/', index.skills),
 ]
